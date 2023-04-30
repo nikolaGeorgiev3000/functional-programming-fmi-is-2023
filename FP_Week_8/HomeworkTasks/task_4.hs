@@ -20,7 +20,7 @@ area (Triangle x y z) = let halfP = (x + y + z) / 2.0 in sqrt $ halfP * (halfP -
 area (Cylinder r h) = 2 * pi * r * h + 2 * pi * r * r 
 
 getAreas :: (Floating a) => [Shape a] -> [a]
-getAreas = map (\ shape -> area shape) 
+getAreas = map area
 
 maxArea :: (Floating a, Ord a) => [Shape a] -> Shape a -- Ord used for `>=`
 maxArea = foldr1 (\ s1 s2 -> if area s1 >= area s2 then s1 else s2) 
