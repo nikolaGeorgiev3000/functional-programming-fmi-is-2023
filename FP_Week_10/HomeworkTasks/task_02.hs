@@ -27,12 +27,13 @@ coldestCountry = countryName . fst . minimumBy (comparing snd) . map (\ country 
     avgTemp cs = (sum $ map (\ (City _ _ t) -> t) cs) / (fromIntegral $ length cs)      -- `cs` === list of cities
     countryName (Country n _ _) = n
 
--- The `map` function is self-explanatory. 
--- `(comparing snd)` returns a function that compares two tuples based on their second element. 
--- The `minimumBy` function maps (I do not mean the `map` function :D) the list of tuples' values to different values, 
--- using the new `compare` function, and returns the pair with the minimum avgTemp. Then, we extract the first element of the pair,
--- and since this element is of the algebraic type `Country`, we apply the `countryName` function, which returns the Name (String) of the country.
-
+{-
+The `map` function is self-explanatory. 
+`(comparing snd)` returns a function that compares two tuples based on their second element. 
+The `minimumBy` function maps (I do not mean the `map` function :D) the list of tuples' values to different values, 
+using the new `compare` function, and returns the pair with the minimum avgTemp. Then, we extract the first element of the pair,
+and since this element is of the algebraic type `Country`, we apply the `countryName` function, which returns the Name (String) of the country.
+-}
 
 {-
 -- Solution using folding
