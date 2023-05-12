@@ -25,4 +25,3 @@ sumPrimeDivs n = helper n 2 0
     | d > n = sum
     | mod n d == 0 && isPrime d = helper n (d + 1) (sum + d) 
     | otherwise = helper n (d + 1) sum
-

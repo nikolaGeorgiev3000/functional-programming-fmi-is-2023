@@ -9,8 +9,7 @@ main = do
 findSumMap :: Int -> Int -> Int -> Int
 findSumMap a b n = sum $ takeLast 3 sequence
  where
-    -- sequence = map (\i -> a + sum (map (\j -> 2^j * vç√zb) [0..i])) [0..n-1]
-    sequence = map (\i -> a + (sum $ map ((*b) . (2^)) [0 .. i])) [0..n-1]
+    sequence = map (\ i -> a + (sum $ map ((*b) . (2^)) [0 .. i])) [0 .. n - 1]
     takeLast x = take x . reverse
 {- THOROUGH explanation of the function -> We first start with 3 parameters: a, b and n. What we are looking for is the sum
 of the last 3 terms in our sequence. Note that every term of our seq is defined as a sum of other terms. So, generally, we want
