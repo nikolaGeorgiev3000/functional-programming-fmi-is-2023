@@ -20,5 +20,3 @@ listLeaves t = filter (`notElem` nodes) distinctNodes
  where
     nodes = map (\ (x, _, _) -> x) t 
     distinctNodes = nub $ concatMap (\ (x, y, z) -> [x, y, z]) t
-
-

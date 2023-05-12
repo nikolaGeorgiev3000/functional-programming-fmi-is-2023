@@ -8,27 +8,3 @@ main = do
 switchsum :: (Num a) => (a -> a) -> (a -> a) -> Int -> (a -> a)
 switchsum f g 1 = f
 switchsum f g n = (\ x -> (f x) + (switchsum g f (n - 1)) (f x))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

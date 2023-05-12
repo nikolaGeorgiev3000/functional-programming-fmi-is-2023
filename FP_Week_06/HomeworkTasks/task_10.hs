@@ -15,5 +15,3 @@ checkNumber n = foldl (\ (x, y) (i, d) -> if even i then (x + d, y) else (x, y +
 -- Quick/Informal explanation: Convert the number to a list of characters, convert each character to its corresponding Int value, 
 -- zip into a list of pairs [(0, firstDigit), (1, secondDigit), ...], use left folding with a starting acc === (0, 0) (which is being 'connected' to (x, y)),
 -- and (i, d), which is cycling through the list of pairs.
-
-

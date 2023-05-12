@@ -16,4 +16,3 @@ sumSpecialPrimes n d = sum $ take n $ filter (\ number -> isPrime number && elem
 -- check whether this character is amongst the characters of the string version of the number. This is done for all elements of the inf. list [2 .. ]. Since
 -- Haskell has a lazy evaluation, it does not really calculate every prime, which has digit d in it. It only evaluates the first n of them, because of the `take`
 -- function. Then we sum these 'n' numbers.
-

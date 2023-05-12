@@ -9,5 +9,4 @@ main = do
     -- print $ (sumExpr (/ 2.0) [1, 2]) 5 == 27.5 -- 1 * (5^1 / 2.0) + 2 * (5^2 / 2.0) = 2.5 + 25 
 
 sumExpr :: (Num a, Num b) => (a -> b) -> [b] -> (a -> b)
-sumExpr f ys = (\ x -> sum $ map (\ (yi, p) -> yi * f (x^p)) $ zip ys [1 ..]) 
- 
+sumExpr f ys = (\ x -> sum $ map (\ (yi, p) -> yi * f (x^p)) $ zip ys [1 ..])

@@ -44,5 +44,3 @@ coldestCountry countries = foldl1 (\ countryName1 countryName2 -> if getAvgTemp 
     getAvgTemp countryName = average [temp | (Country name _ cities) <- countries, (City _ _ temp) <- cities, name == countryName]
     countryNames = map (\ (Country name _ _) -> name) countries
 -}
-
-

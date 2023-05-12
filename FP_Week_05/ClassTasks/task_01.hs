@@ -26,4 +26,3 @@ compose f g = f . g -- First apply g, then apply f to the result of g (in our ca
 partiallyApply :: (a -> a -> a) -> a -> (a -> a)
 partiallyApply f x = f x
 -- partiallyApply = id
-

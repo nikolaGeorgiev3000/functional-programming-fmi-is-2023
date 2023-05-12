@@ -42,6 +42,3 @@ p n = helper 1 1
     helper k pentNum
      | k == n = pentNum -- Base
      | otherwise = helper (k + 1) (pentNum + 3 * k + 1) 
-
-
-

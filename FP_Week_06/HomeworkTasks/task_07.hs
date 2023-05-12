@@ -16,4 +16,3 @@ sumUnique xss = sum $ map sumUniqueList xss -- Sum for each of the sublists of t
 
     count :: (Eq a) => a -> [a] -> Int
     count x = length . filter (==x)
-

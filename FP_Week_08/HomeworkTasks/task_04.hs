@@ -23,4 +23,4 @@ getAreas :: (Floating a) => [Shape a] -> [a]
 getAreas = map area
 
 maxArea :: (Floating a, Ord a) => [Shape a] -> Shape a -- Ord used for `>=`
-maxArea = foldr1 (\ s1 s2 -> if area s1 >= area s2 then s1 else s2) 
+maxArea = foldr1 (\ s1 s2 -> if area s1 >= area s2 then s1 else s2)

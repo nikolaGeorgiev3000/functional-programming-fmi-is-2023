@@ -21,4 +21,4 @@ reduceStr = reverse . helper []
     helper [] (x:xs) = helper [x] xs
     helper (s:ss) (x:xs)
      | areDups s x = helper ss xs -- Skip the dubs
-     | otherwise = helper (x:s:ss) xs                                                                                          
+     | otherwise = helper (x:s:ss) xs          

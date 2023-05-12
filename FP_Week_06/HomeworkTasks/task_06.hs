@@ -9,14 +9,6 @@ main = do
     print $ (getOddCompositionValue [(\x -> x + 1),(\x -> x * 2),(\x -> x - 1), (\x -> div x 2)]) 2 == 2 -- f1(f3(2)) === f1(1) === 2
 
 getOddCompositionValue :: [(a -> a)] -> (a -> a)
-getOddCompositionValue fs = (\ x -> foldr (\ (idx, f) acc -> if odd idx then f acc else acc) x $ zip [1 .. ] fs) -- Sensei's solution
-
-
-
+getOddCompositionValue fs = (\ x -> foldr (\ (idx, f) acc -> if odd idx then f acc else acc) x $ zip [1 .. ] fs)          -- Sensei's solution
 
 -- getOddCompositionValue fs = (\ x -> foldr (\ f acc -> f acc) x (map snd $ filter (\ (i, _) -> odd i) $ zip [1 .. ] fs)) -- My solution
-
-
-
-
-

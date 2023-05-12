@@ -12,4 +12,3 @@ roundToTwoDecimals num = (fromIntegral $ round $ num * 100) / 100
 
 getVolumes :: [Cylinder] -> [Double]
 getVolumes cylinders = map (\ (r, h) -> roundToTwoDecimals $ pi * r * r * h) cylinders
-

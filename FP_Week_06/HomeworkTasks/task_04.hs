@@ -34,13 +34,6 @@ averageBalanceOfCities :: ([Account], [Person]) -> [String] -> Double
 averageBalanceOfCities db xs = getAverageBalance db (\ (_, _, city) -> elem city xs)
 
 
-
-
-
-
-
-
-
 -- A little worse looking solution:
 
 {-

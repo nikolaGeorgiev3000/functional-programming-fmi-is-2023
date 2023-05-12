@@ -14,4 +14,3 @@ sumTupleNonPM pair = fst pair + snd pair
 
 sumTuplePM :: (Int, Int) -> Int
 sumTuplePM (x, y) = x + y
-

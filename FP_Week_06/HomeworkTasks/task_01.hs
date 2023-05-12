@@ -8,4 +8,3 @@ main = do
 
 rf :: (a -> Int) -> (a -> Int) -> ([a] -> (a -> a) -> [a])
 rf f g = (\ xs h -> [h x | x <- xs, f x > g x])
-

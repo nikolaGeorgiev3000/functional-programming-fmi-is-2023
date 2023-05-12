@@ -25,4 +25,3 @@ doubleFactIter n = helper 1 n -- 0!! = 1!! := 1
 calcSeriesSum :: Double -> Integer -> Double -- The n-th partial sum is a natural number
 calcSeriesSum _ 0 = -2 -- This is the base case, which, mathematically, could be put inside the Sum
 calcSeriesSum x n = ((-2)^(n + 1) * x^n) / (fromIntegral $ doubleFactIter $ 2 * n + 1) + calcSeriesSum x (n - 1)
-

@@ -17,8 +17,6 @@ getClosedIntervalRec x y = helper (min x y) (max x y)
      | realStart > realFinish = []
      | otherwise = realStart : helper (realStart + 1) realFinish -- fix the first el, call rec. for the rest
 
-
-
 -- One line
 getClosedIntervalOneLine :: Int -> Int -> [Int]
 getClosedIntervalOneLine x y = [min x y .. max x y]

@@ -15,5 +15,3 @@ isAscending = all (uncurry (<=)) . (zip <*> tail) . show -- Example: 12334 -> "1
                                                          -- string (the result from `show`) and the resulting tail string to get a list of adjacent digit pairs. The `(uncurry (<=))`
                                                          -- function takes a pair of numbers, and checks them with `<=` operator. It does that for all of the pairs, because of
                                                          -- the `all` function, which is a BIG CONJUNCTION.
-
-
