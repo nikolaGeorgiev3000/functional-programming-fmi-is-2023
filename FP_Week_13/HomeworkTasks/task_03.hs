@@ -18,7 +18,7 @@ cone = checkLevels . getLevels
 
 getLevels :: BTree Int -> [[Int]]
 getLevels Nil  = [[]]
-getLevels tree = takeWhile (\ xs -> not $ null xs) $ map (getLevel tree) [0 .. ]
+getLevels tree = takeWhile (not . null) $ map (getLevel tree) [0 .. ]
 
 checkLevels :: [[Int]] -> Bool
 checkLevels [[]]  = True
